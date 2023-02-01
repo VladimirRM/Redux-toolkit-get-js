@@ -1,8 +1,8 @@
 import React from 'react'
 import FirstName from './FirstName'
-import LastName from './LasName'
+import LastName from './LastName'
 import { useDispatch } from 'react-redux'
-import { setFirstName } from '../features/user/userSlise'
+import { setFirstName,setLastName } from '../features/user/userSlise'
 
 
 const User = () => {
@@ -19,6 +19,8 @@ const User = () => {
             <input
                 type='text'
                 placeholder='Second Name'
+                onChange={(e)=>{dispatch(setLastName(e.target.value))}}
+
                 className='w-full p-1 mb-2 focus:outline-none focus:border-lime-500 focus: border-2 placeholder:text-sm'
             />
             <div className='flex gap-20 py-5'>
