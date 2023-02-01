@@ -11,7 +11,9 @@ export const todoSlice = createSlice({
   name:'todos',
   initialState,
   reducers:{
-      addTodo:(state,action)=>{},
+      addTodo:(state,action)=>{
+        state.todos.push(action.payload)
+      },
   }
 })
 export const {addTodo } = todoSlice.actions
