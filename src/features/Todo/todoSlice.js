@@ -1,23 +1,18 @@
-import React from 'react'
+
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  todos:[]
+  todos:[],
 }
 
-const todoSlice = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
 
-export default todoSlice = createSlice({
-  name:todos,
+
+export const todoSlice = createSlice({
+  name:'todos',
   initialState,
   reducers:{
-      addTodo:(state,action)=>{}
+      addTodo:(state,action)=>{},
   }
 })
 export const {addTodo } = todoSlice.actions
+export default todoSlice.reducer
