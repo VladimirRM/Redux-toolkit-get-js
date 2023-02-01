@@ -14,6 +14,9 @@ export const todoSlice = createSlice({
       addTodo:(state,action)=>{
         state.todos.push(action.payload)
       },
+      toggleCompletedTodo:()=>{
+        
+      }
   }
 })
 export const {addTodo } = todoSlice.actions
