@@ -1,6 +1,10 @@
 import React from 'react'
 import { createSlice } from '@reduxjs/toolkit'
 
+const initialState = {
+  todos:[]
+}
+
 const todoSlice = () => {
   return (
     <div>
@@ -9,4 +13,11 @@ const todoSlice = () => {
   )
 }
 
-export default todoSlice
+export default todoSlice = createSlice({
+  name:todos,
+  initialState,
+  reducers:{
+      addTodo:(state,action)=>{}
+  }
+})
+export const {addTodo } = todoSlice.actions
